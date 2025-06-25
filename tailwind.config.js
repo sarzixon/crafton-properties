@@ -1,3 +1,4 @@
+const { colors } = require('laravel-mix/src/Log');
 const defaults = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -14,30 +15,38 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['"Nunito Sans"', ...defaults.fontFamily.sans],
+                body: ['"Instrument Sans"', ...defaults.fontFamily.sans],
+                display: ['"Clash Display"', ...defaults.fontFamily.serif],
             },
-            lineHeight: {
-                normal: '1.6',
-                loose: '1.75',
-            },
-            maxWidth: {
-                '8xl': '88rem',
-            },
-            boxShadow: {
-                search: '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
-            },
+            colors: {
+                primary: '#316FAF',
+                'primary-hovered': '#215183',
+                'primary-clicked': '#16395C',
+                'text': '#4D4D4D',
+                'text-on-dark': '#E3E3E3',
+                'headings-dark': '#11273D',
+                'headings-light': '#11273D',
+                bg: '#FFFFFF',
+                'bg-subtle': '#ECF4FA',
+                'bg-alt': '#F6FBFF',
+                'bg-section': '#3C536A',
+                'bg-light-surface': '#FEFEFE',
+                'bg-medium-surface': '#BFD2E6',
+                'stroke': '#D3E0EB',
+                'stroke-light': '#EBF3FA'
+            }
         },
         fontSize: {
-            xs: '.8rem',
-            sm: '.925rem',
-            base: '1rem',
-            lg: '1.125rem',
+            xs: '.5rem',
+            sm: '.625rem',
+            base: '.875rem',
+            lg: '1rem', //base
             xl: '1.25rem',
             '2xl': '1.5rem',
-            '3xl': '1.75rem',
-            '4xl': '2.125rem',
-            '5xl': '2.625rem',
-            '6xl': '10rem',
+            '3xl': '2rem',
+            '4xl': '2.625rem',
+            '5xl': '3.5rem',
+            '6xl': '4.6875rem',
         },
     },
 };
