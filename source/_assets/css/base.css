@@ -8,7 +8,7 @@
 @font-face {
     font-family: 'Clash Display';
     src: url('/assets/fonts/ClashDisplay/ClashDisplay.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
 }
 

@@ -28,7 +28,7 @@
 </head>
 
 <body class="flex font-body flex-col justify-between min-h-screen">
-    <header class="flex items-center border-b border-stroke-light h-20" role="banner">
+    <header class="flex items-center border-b border-stroke-light h-20 px-6 lg:px-0" role="banner">
         <div class="container flex items-center max-w-8xl mx-auto">
             <div class="flex flex-1 items-center">
                 <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
@@ -36,12 +36,12 @@
                 </a>
             </div>
 
-            <div class="flex flex-[2] justify-center items-center">
+            <div class="flex flex-[2] justify-end lg:justify-center items-center">
                 @include('_nav.menu')
 
                 @include('_nav.menu-toggle')
             </div>
-            <div class="flex flex-1 justify-end items-center">
+            <div class="lg:flex lg:flex-1 justify-end items-center hidden">
                 <a
                     class="inline-flex bg-primary rounded-full py-[13px] px-5 font-display uppercase font-medium leading-none text-white">
                     Kontakt
@@ -57,18 +57,17 @@
         @yield('body')
     </main>
 
-    <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
-        <ul class="flex flex-col md:flex-row justify-center list-none">
-            <li class="md:mr-2">
-                &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
-            </li>
-
-            <li>
-                Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind
-                    CSS</a>.
-            </li>
-        </ul>
+    <footer class="bg-white text-center text-sm  pt-5 pb-10">
+        <div class="container mx-auto">
+            <p>© 2025 RealEstate Sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+            <p>Projekt i realizacja: <strong>Crafton</strong></p>
+            <p class="max-w-6/12">Materiały zawarte na stronie WWW mają charakter poglądowy i nie mogą być traktowane
+                jako ostateczne
+                projekty
+                realizacyjne. Deweloper zastrzega sobie prawo zmian. <br /> Niniejsza informacja nie stanowi oferty w
+                rozumieniu
+                przepisów Kodeksu Cywilnego i ma wyłącznie charakter informacyjny.</p>
+        </div>
     </footer>
 
     <script src="{{ mix('js/main.js', 'assets/build') }}"></script>

@@ -11,7 +11,7 @@
 @endphp
 
 @if ($type == 'link')
-    <a class="{{ $classes }} {{ $attributes ?? '' }}" href="{{ $href }}">
+    <a class="{{ $classes }} {{ $attributes ?? '' }}" href="{{ $href }}" style="width: fit-content">
         <span class="text-nowrap">{{ $slot ?? 'Click me' }}</span>
         @if ($variant == 'primary')
             <img class="ml-[10px]" src="/assets/img/forward.svg" alt="arrow">
